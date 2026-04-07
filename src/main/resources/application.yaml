@@ -7,5 +7,9 @@ spring:
       chat:
         options:
           model: gpt-5.4-nano
-          temperature: 0.6
+          temperature: 0.9
 #          maxTokens: 2048
+logging:
+  level:
+    org.springframework.ai:
+      chat.client: DEBUG

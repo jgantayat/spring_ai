@@ -14,7 +14,7 @@ class AIServiceTest {
 
     @Test
     public void testGetJokes(){
-        String joke =" Tell me a joke about snake";
+        String joke =" Tell me a joke about corporate";
         var content = aiService.getAJoke(joke);
         System.out.println("Joke = "+ content);
     }
