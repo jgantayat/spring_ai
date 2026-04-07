@@ -19,4 +19,28 @@ class AIServiceTest {
         System.out.println("Joke = "+ content);
     }
 
+    @Test
+    public void testGetEmbedding(){
+        String text = "What is Spring Boot?";
+        var embedding = aiService.getEmbedding(text);
+        System.out.println("Embedding length = "+ embedding.length);
+    }
+
+    @Test
+    public void testIngestData(){
+        String text = "Spring Boot is a framework that simplifies the development of Java applications by providing a set of tools and conventions for building and deploying applications quickly and easily.";
+        aiService.IngestData(text);
+    }
+
+    @Test
+    public void testIngestDocumentToVectorStore(){
+        aiService.ingestDocumentToVectorStore();
+    }
+
+    @Test
+    public void testGetSimilaritySearch(){
+        String text = "What is Spring Boot?";
+        var documents = aiService.getSimilaritySearch(text);
+        System.out.println("Documents = "+ documents);
+    }
 }

@@ -3,12 +3,21 @@ spring:
     name: spring_ai
   ai:
     openai:
-      api-key: ${API_KEY}
+      api-key: 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
       chat:
         options:
           model: gpt-5.4-nano
           temperature: 0.9
-#          maxTokens: 2048
+      embeddings:
+        options:
+          model: text-embedding-3-small
+    vectorstore:
+      pgvector:
+        initialize-schema: true
+  datasource:
+    url: jdbc:postgresql://localhost:5434/my-vectortest-db
+    username: my-user
+    password: password
 logging:
   level:
     org.springframework.ai:
