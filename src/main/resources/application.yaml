@@ -7,16 +7,7 @@ spring:
         options:
           model: gpt-5.4-nano
           temperature: 0.9
-      embeddings:
-        options:
-          model: text-embedding-3-small
-    vectorstore:
-      pgvector:
-        initialize-schema: true
-  datasource:
-    url: jdbc:postgresql://localhost:5434/my-vectortest-db
-    username: my-user
-    password: password
+#          maxTokens: 2048
 logging:
   level:
     org.springframework.ai:
